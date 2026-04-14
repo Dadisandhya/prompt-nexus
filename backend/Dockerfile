@@ -6,4 +6,5 @@ COPY . .
 
 RUN pip install django redis
 
+# CMD ["python", "manage.py", "runserver", "0.0.0.0:10000"]
 CMD ["python", "manage.py", "runserver", "0.0.0.0:10000"]
