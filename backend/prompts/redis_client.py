@@ -1,16 +1,24 @@
 import redis
+import os
 
 try:
-    # r = redis.Redis(host='localhost', port=6379, db=0)
-    r = redis.Redis(host='redis', port=6379, db=0)
+    redis_url = os.environ.get("REDIS_URL")
+
+    if redis_url:
+        r = redis.Redis.from_url(redis_url)
+    else:
+        r = redis.Redis(host='localhost', port=6379, db=0)
+
     r.ping()
 except:
-    r = None   # safe fallback
+    r = None
+
 
 def increment_view(prompt_id):
     if r:
         return r.incr(f"prompt:{prompt_id}:views")
     return 0
+
 
 def get_views(prompt_id):
     if r:
