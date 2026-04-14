@@ -6,4 +6,4 @@ COPY . /app
 
 RUN pip install django redis
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:10000"]
+CMD ["sh", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:10000"]
