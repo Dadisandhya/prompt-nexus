@@ -1,14 +1,9 @@
-version: '3.8'
+FROM python:3.11
 
-services:
-  web:
-    build: ./backend
-    ports:
-      - "8000:8000"
-    depends_on:
-      - redis
+WORKDIR /app
 
-  redis:
-    image: redis:latest
-    ports:
-      - "6379:6379"
+COPY . /app
+
+RUN pip install django redis
+
+CMD ["python", "manage.py", "runserver", "0.0.0.0:10000"]
