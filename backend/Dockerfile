@@ -2,7 +2,7 @@ FROM python:3.11
 
 WORKDIR /app
 
-COPY backend/ /app
+COPY . /app
 
 RUN pip install django redis
 
