@@ -1,9 +1,7 @@
-from django.urls import path
-from . import views
+from django.contrib import admin
+from django.urls import path, include
 
 urlpatterns = [
-    path('', views.home),
-    path('prompts/', views.get_prompts),
-    path('prompts/create/', views.create_prompt),
-    path('prompts/<uuid:id>/', views.get_prompt),
+    path('admin/', admin.site.urls),
+    path('', include('prompts.urls')),
 ]
