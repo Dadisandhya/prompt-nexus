@@ -3,4 +3,4 @@ from .models import Prompt
 
 @admin.register(Prompt)
 class PromptAdmin(admin.ModelAdmin):
-    list_display = ('title', 'complexity', 'created_at')
+    list_display = ('title', 'complexity')
