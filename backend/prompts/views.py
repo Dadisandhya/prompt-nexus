@@ -66,3 +66,6 @@ def get_prompt(request, id):
 
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=500)
+
+def home(request):
+    return JsonResponse({"message": "Prompt Nexus API is running 🚀"})
