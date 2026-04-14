@@ -3,12 +3,16 @@ from .models import Prompt
 from .redis_client import increment_view, get_views
 import json
 
-# GET all prompts
+
+def home(request):
+    return JsonResponse({"message": "Prompt Nexus API is running 🚀"})
+
+
 def get_prompts(request):
     data = list(Prompt.objects.values())
     return JsonResponse(data, safe=False)
 
-# POST create prompt
+
 def create_prompt(request):
     body = json.loads(request.body)
 
@@ -20,7 +24,7 @@ def create_prompt(request):
 
     return JsonResponse({"id": str(prompt.id)})
 
-# GET single prompt
+
 def get_prompt(request, id):
     prompt = Prompt.objects.get(id=id)
 
