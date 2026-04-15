@@ -1,11 +1,10 @@
-# 🚀 Prompt Nexus
+Prompt Nexus
 
 A full-stack backend project built with Django, Redis, and Docker.
 This application allows users to create, view, and manage prompts, with real-time view tracking using Redis.
 
 ---
-
-## 🧰 Tech Stack
+Tech Stack
 
 * **Backend:** Django (Python)
 * **Database:** SQLite (default)
@@ -14,7 +13,7 @@ This application allows users to create, view, and manage prompts, with real-tim
 
 ---
 
-## 📌 Features
+Features
 
 * Create prompts (title, content, complexity)
 * Fetch all prompts
@@ -25,7 +24,7 @@ This application allows users to create, view, and manage prompts, with real-tim
 
 ---
 
-## 📁 Project Structure
+Project Structure
 
 ```
 prompt-nexus/
@@ -47,7 +46,7 @@ prompt-nexus/
 
 ---
 
-## ⚙️ Setup Instructions
+Setup Instructions
 
 ### 🔹 Option 1: Run using Docker (Recommended)
 
@@ -57,14 +56,14 @@ docker compose up --build
 
 ---
 
-### 🌐 Access Application
+ Access Application
 
 * API: http://localhost:8000/prompts/
 * Admin: http://localhost:8000/admin/
 
 ---
 
-## 🧪 Sample API Endpoints
+Sample API Endpoints
 
 ### 🔹 Get All Prompts
 
@@ -110,7 +109,7 @@ GET /prompts/<uuid>/
 
 ---
 
-## ⚡ Redis Integration
+##  Redis Integration
 
 * Each time a prompt is accessed, Redis increments a counter:
 
@@ -122,7 +121,7 @@ prompt:<id>:views
 
 ---
 
-## 🐳 Docker Setup
+## Docker Setup
 
 ### docker-compose.yml includes:
 
@@ -137,7 +136,7 @@ docker compose up --build
 
 ---
 
-## 📌 Future Improvements
+##  Future Improvements
 
 * JWT Authentication
 * User-based prompt ownership
@@ -146,12 +145,12 @@ docker compose up --build
 
 ---
 
-## 🙌 Author
+## Author
 
-**Prabhakara Rao M**
+**Dadi sandhya**
 
 ---
 
-## ⭐ Notes
+##  Notes
 
 This project demonstrates backend development, caching, and DevOps skills, suitable for real-world scalable applications.
