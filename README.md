@@ -3,6 +3,8 @@ Prompt Nexus
 A full-stack backend project built with Django, Redis, and Docker.
 This application allows users to create, view, and manage prompts, with real-time view tracking using Redis.
 
+Live link: https://prompt-nexus-3rd3.onrender.com
+
 ---
 Tech Stack
 
